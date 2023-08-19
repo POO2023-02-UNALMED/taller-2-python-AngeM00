@@ -19,13 +19,13 @@ class Auto:
         verificacion = True
         for i in self.asientos:
             if i != None:
-                if i.registro != self.registro or i.registro != self.motor.registro:
+                if i.registro != self.registro:
                     verificacion = False
                     break
         if self.motor.registro == self.registro and verificacion:
-            print("Auto original")
+            return "Auto original"
         else:
-            print("Las piezas no son originales")
+            return "Las piezas no son originales"
 
 class Asiento:
     def __init__(self,color,precio,registro):
@@ -50,4 +50,4 @@ class Motor:
     def asignarTipo(self,tipo):
         posibles = ["electrico","gasolina"]
         if tipo in posibles:
-            self.tipo = tipo
+            self.tipo = tipo    
