@@ -19,7 +19,7 @@ class Auto:
         verificacion = True
         for i in self.asientos:
             if i != None:
-                if i.registro != self.registro:
+                if i.registro != self.registro or i.registro != self.motor.registro:
                     verificacion = False
                     break
         if self.motor.registro == self.registro and verificacion:
