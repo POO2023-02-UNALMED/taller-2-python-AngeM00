@@ -9,7 +9,11 @@ class Auto:
         self.registro = registro
     
     def cantidadAsientos(self):
-        return len(self.asientos)
+        cantidad = 0
+        for i in self.asientos:
+            if i != None:
+                cantidad += 1
+        return cantidad
     
     def verificarIntegridad(self):
         verificacion = True
