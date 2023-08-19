@@ -21,6 +21,7 @@ class Auto:
             if i != None:
                 if i.registro != self.registro:
                     verificacion = False
+                    break
         if self.motor.registro == self.registro and verificacion:
             print("Auto original")
         else:
